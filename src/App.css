@@ -1,38 +1,77 @@
 .App {
+  display: flex;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.button-panel {
+  width: 200px;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.button-panel button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.button-panel button:hover {
+  background-color: #e0e0e0;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.uploaded-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.chakra-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  cursor: move;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+#rotationInput {
+  width: 60px;
+  margin-left: 10px;
+}
+
+.line-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
